@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.2.0-1 (tags/2.2.0u1-7139; 2012-06-02T10:55:19+0000) JAXWS-RI/2.2.6-2 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://main.webservice.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://main.webservice.com/">
+
+<xs:element name="setMonitorData" type="tns:setMonitorData"/>
+
+<xs:element name="setMonitorDataResponse" type="tns:setMonitorDataResponse"/>
+
+<xs:element name="setTerminalData" type="tns:setTerminalData"/>
+
+<xs:element name="setTerminalDataResponse" type="tns:setTerminalDataResponse"/>
+
+<xs:complexType name="setTerminalData">
+<xs:sequence>
+<xs:element name="device" type="xs:string" minOccurs="0"/>
+<xs:element name="data" type="tns:TerminalData" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TerminalData">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="setTerminalDataResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="setMonitorData">
+<xs:sequence>
+<xs:element name="device" type="xs:string" minOccurs="0"/>
+<xs:element name="md" type="tns:MonitorData" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="MonitorData">
+<xs:sequence>
+<xs:element name="interfaceChanged" type="xs:boolean"/>
+<xs:element name="apChanged" type="xs:boolean"/>
+<xs:element name="timeChanged" type="xs:double"/>
+<xs:element name="isWireless" type="xs:boolean"/>
+<xs:element name="isDeleted" type="xs:boolean"/>
+<xs:element name="myAP" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="mac" type="xs:string" minOccurs="0"/>
+<xs:element name="ip" type="xs:string" minOccurs="0"/>
+<xs:element name="mask" type="xs:string" minOccurs="0"/>
+<xs:element name="networkAddress" type="xs:string" minOccurs="0"/>
+<xs:element name="bcastAddr" type="xs:string" minOccurs="0"/>
+<xs:element name="defaultGateway" type="xs:string" minOccurs="0"/>
+<xs:element name="mtu" type="xs:string" minOccurs="0"/>
+<xs:element name="packetErrorRate" type="xs:string" minOccurs="0"/>
+<xs:element name="broadcastRate" type="xs:string" minOccurs="0"/>
+<xs:element name="consumedGauge" type="xs:string" minOccurs="0"/>
+<xs:element name="baseStationMAC" type="xs:string" minOccurs="0"/>
+<xs:element name="baseStationESSID" type="xs:string" minOccurs="0"/>
+<xs:element name="channel" type="xs:string" minOccurs="0"/>
+<xs:element name="accessPointSituation" type="xs:string" minOccurs="0"/>
+<xs:element name="signalLevel" type="xs:string" minOccurs="0"/>
+<xs:element name="linkQuality" type="xs:string" minOccurs="0"/>
+<xs:element name="txPower" type="xs:string" minOccurs="0"/>
+<xs:element name="noiseLevel" type="xs:string" minOccurs="0"/>
+<xs:element name="missedBeacon" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setMonitorDataResponse">
+<xs:sequence/>
+</xs:complexType>
+</xs:schema>
